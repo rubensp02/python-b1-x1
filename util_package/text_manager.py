@@ -67,3 +67,18 @@ def remove_punctuation_marks(cad):
     """ A function that removes punctuation marks from a word or a text.
     """
     return cad.translate(str.maketrans('', '', string.punctuation))
+
+def just_word(text):
+  """
+  A function that returns just 1 word from a text. 
+  """
+    if text and text[0] == " ":
+        text = text[1:]
+    text = remove_punctuation_marks(text)
+    word = ""
+    for i in text:
+        if not is_space(i) and not is_newline(i):
+            word += i
+        else:
+            break
+    return word
