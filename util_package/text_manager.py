@@ -88,3 +88,21 @@ def m_split(text):
         words.append(word)
 
     return words
+
+def split_sentences(text):
+    sentences = []
+    sentence = ""
+
+    for char in text:
+        if not is_newline(char):
+            sentence += char
+        else:
+            if sentence != "":
+                sentences.append(sentence.strip())
+                sentence = ""
+
+    # añadir la última frase si no termina en \n
+    if sentence != "":
+        sentences.append(sentence.strip())
+
+    return sentences
