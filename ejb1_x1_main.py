@@ -59,13 +59,19 @@ def find_largest_word(text):
     return largest_word
     
 def is_palindrome_word(word):
-    # Write here your code
-    pass
+    word = remove_punctuation_marks(word).lower()
+    if len(word) <= 1:
+        return True
+
+    if word[0] != word[-1]:
+        return False
+
+    return is_palindrome_word(word[1:-1])
     
 
 
 def count_palindrome_words(text):
-    # Write here your code
+
     pass
 
 
