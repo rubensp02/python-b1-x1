@@ -71,8 +71,12 @@ def is_palindrome_word(word):
 
 
 def count_palindrome_words(text):
-
-    pass
+    words = m_split(text)
+    count=0
+    for i in words:
+        if is_palindrome_word(i) == True:
+            count += 1
+    return count
 
 
 def find_size_largest_sentence(text, filter):
