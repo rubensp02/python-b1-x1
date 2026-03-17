@@ -46,7 +46,7 @@ el valor pasado como filtro y la oración tiene una longitud de la cadena de tex
 """
 # Add your imports here
 from util_package import text_manager 
-from util_package.text_manager import TEXT, is_newline, is_space, remove_punctuation_marks, m_split
+from util_package.text_manager import TEXT, is_newline, is_space, remove_punctuation_marks, m_split, split_sentences
 
 def find_largest_word(text):
     words= m_split(text)
